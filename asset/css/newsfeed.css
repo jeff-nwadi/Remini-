@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Familjen Grotesk', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --body-color: #ffff;
+    --primary-color: #244111;
+    --secondary-color: #80E142;
+    --tertiary-color: #D9D9D9;
+    --text-header-color: #000;
+}
+
+section{
+    display: grid;
+    place-content: center;
+    align-items: center;
+    padding: 50px 25%;
+}
+
+/* ==============status section============= */
+
+.status-container::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 65%;
+    background: rgba(232, 232, 232, 0.93);
+    top: 13rem;
+}
+
+.upload{
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 6px solid #6B42E1;
+    cursor: pointer;
+}
+
+.upload label i{
+   font-size: 25px;
+   cursor: pointer;
+}
+
+.status img{
+    width: 110px;
+    height: 110px;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 6px solid #6B42E1;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.swiper-wrapper{
+    display: flex;
+}
+
+.swiper-slide{
+    margin: 0 1rem;
+}
+
+.upload label{
+    display: block;
+}
+
+.upload input{
+    display: none;
+    
+}
+
+/* ===============feed container================== */
+
+.feed-container{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    margin: 8rem 0;
+}
+
+.feed-content .profile-content img{
+    width: 78px;
+    height: 78px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+.profile-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-content{
+    display: flex;
+    align-items: center;
+}
+
+.profile-content .profile-name span{
+    color: #B1B1B1;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.8px;
+}
+
+.profile-content .profile-name h3{
+    color: #000;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.3px;
+}
+
+.right-content a{
+    width: 87px;
+    height: 29px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.93);
+    padding: 10px 20px;
+    color: #000;
+}
+
+.post{
+    position: relative;
+    padding-top: 1rem;
+}
+
+.heading{
+    position: absolute;
+    top: 30px;
+    padding: 1.5rem 2rem;
+
+}
+
+.heading h3{
+    color: #FFF;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.65px;
+
+}
+
+.post .number-of-post{
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    padding: 0 2rem;
+}
+
+.post .number-of-post input{
+    width: 67px;
+    height: 41px;
+    flex-shrink: 0;
+    outline: none;
+    border: none;
+    border-radius: 17px;
+    background: #FEF9F9;
+    text-align: center;
+    font-size: 18px;
+}
+
+.feed-content{
+    margin: 2.5rem 0;
+}
+
+.post .photos img{
+    width: 513px;
+    height: 481px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.overlay{
+    position: absolute;
+    width: 513px;
+    height: 481px;
+    background: #000;
+    opacity: 0.3;
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+
+/* fixed secton */
+nav{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    padding-top: 2rem;
+    position: sticky;
+    bottom: 40px;
+}
+
+.fixed-contianer{
+    width: 300px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 52px;
+    border: 2px solid #000;
+    background: #FFF;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.fixed-contianer .feed-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-contianer .feed-content i{
+    margin: 0 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: #244111;
+}
+
+.fixed-contianer .feed-content i:hover{
+    transform: scale(1.3);
+}
+ 
+.active{
+     transform: scale(1.5);
+}
+
+
+@media (max-width: 480px){ 
+    body { 
+        background-color: red;
+    }
+
+    section{
+        margin: 10px 20%;
+    }
+
+    .post .photos img{
+        width: 300px;
+        height: 350px;
+    }
+    
+    .overlay{
+        width: 300px;
+        height: 350px;
+    }
+
+    .profile-content .profile-name h3{
+        color: #000;
+        font-size: 16px;
+    }
+    
+    .right-content a{
+        width: 50px;
+        height: 29px;
+        padding: 10px 15px;
+    }
+
+    .feed-content .profile-content img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .heading{
+        position: absolute;
+        top: 20px;
+        padding: 1rem 1.5rem;
+    
+    }
+    
+    .heading h3{
+        font-size: 25px;
+    
+    }
+}
+
+/* Media Query for low resolution Tablets, Ipads */ 
+ @media (min-width: 481px) and (max-width: 767px) { 
+     body { 
+        background-color: yellow; 
+    }
+
+    section{
+        margin: 10px 15%;
+    }
+
+    .post .photos img{
+        width: 300px;
+        height: 350px;
+    }
+    
+    .overlay{
+        width: 300px;
+        height: 350px;
+    }
+
+    .profile-content .profile-name h3{
+        color: #000;
+        font-size: 16px;
+    }
+    
+    .right-content a{
+        width: 50px;
+        height: 29px;
+        padding: 10px 15px;
+    }
+
+    .feed-content .profile-content img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .heading{
+        position: absolute;
+        top: 20px;
+        padding: 1rem 1.5rem;
+    
+    }
+    
+    .heading h3{
+        font-size: 25px;
+    
+    }
+
+} 
+
+
+/* Media Query for Tablets Ipads portrait mode */ 
+@media (min-width: 768px) and (max-width: 1024px){ 
+    body { 
+        background-color: blue; 
+    }
+
+    .status-container::after{
+    display: none;
+    }
+
+} 
+
+/* Media Query for Laptops and Desktops */ 
+ @media (min-width: 1025px) and (max-width: 1280px){ 
+    /* body { 
+        background-color: green; 
+    }  */
+
+    .status-container::after{
+        display: none;
+    }
+
+}
+
+/* Media Query for Large screens */ 
+@media (min-width: 1281px) { 
+   
+} 
+   

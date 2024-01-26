@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Familjen Grotesk', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --body-color: #ffff;
+    --primary-color: #244111;
+    --secondary-color: #80E142;
+    --tertiary-color: #D9D9D9;
+    --text-header-color: #000;
+}
+
+section{
+    /* display: grid;
+    align-items: center;
+    place-items: center; */
+    padding: 30px 10%;
+}
+.contianer .top {
+   display: flex;
+   justify-content: center;
+}
+
+
+.contianer .top .text h3{
+    padding-bottom: 5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: -1px;
+}
+
+.contianer .top i{
+    position: relative;
+    right: -600px;
+    cursor: pointer;
+    transition: all .2s;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.contianer .top i:hover{
+    transform: translateX(25%);
+}
+
+.profile-image{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.profile-image img{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #80E142;
+}
+
+.profile-image label{
+    display: block;
+    width: 182px;
+    background: transparent;
+    border: 2px solid #000;
+    border-radius: 17px;
+    cursor: pointer;
+    padding: 12px 35px;
+}
+
+.profile-image input{
+    display: none;
+    
+}
+
+.change-pics-btn{
+    padding-top: 1.2rem;
+    cursor: pointer;
+}
+
+.settings{
+    display: flex;
+    justify-content: space-around;
+}
+
+form{
+    border: 1px solid #eeee;
+    padding: 4rem 10rem;
+}
+
+.info-details input{
+    margin: 1.3rem 0;   
+    width: 270px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 2px solid #edf2f7;
+    font-size: 1rem;
+    padding: 0px 20px;
+    outline: none;
+}
+
+input:focus{
+    border: 2px solid #80E142;
+} 
+
+textarea:focus{
+    border: 2px solid #80E142;
+}
+
+textarea{
+    outline: none;
+    margin: 1.3rem 0;   
+    width: 270px;
+    height: 146px;
+    padding: 10px 20px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 2px solid #edf2f7;
+    font-size: 1rem;
+}
+
+.btn{
+    text-align: center;
+}
+
+.btn button{
+    width: 182px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 17px;
+    border: 1px solid #D2D2D2;
+    background: #000;
+    border: none;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.btn button:hover{
+    background: #424040;
+}
+
+.deactivate{
+    padding-top: 2rem;
+    text-align: center;
+}
+
+
+.log-out-btn{
+    padding: 1rem;
+    text-align: center;
+}
+
+.log-out-btn a{
+    color: #000;
+}
+
+.log-out-btn a:hover{
+    color: red;
+}
+
+.deactivate a{
+    color: #F43B51;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1px;
+}
+
+/* media query */
+
+@media (max-width: 480px){ 
+    /* body { 
+        background-color: red; 
+    } */
+
+    .section{
+        padding: 30px 5%;
+    }
+    .settings{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .info-details{
+        padding-top: 4rem;
+    }
+
+
+    form{
+        border: 1px solid #eeee;
+        padding: 3rem 3rem;
+        padding-top: 6rem;
+    }
+
+    .deactivate{
+        text-align: center;
+    }
+    .contianer .top i{
+        position: relative;
+        left: 200px;
+        cursor: pointer;
+    }
+
+
+    form{
+        border: none;
+    }
+}
+
+/* Media Query for low resolution Tablets, Ipads */ 
+@media (min-width: 481px) and (max-width: 767px) { 
+    /* body { 
+        background-color: yellow; 
+    } */
+
+    .section{
+        padding: 30px 5%;
+    }
+    .settings{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        border: 1px solid #eeee;
+        padding: 3rem 3rem;
+        padding-top: 6rem;
+    }
+
+    .info-details{
+        padding-top: 3rem;
+    }
+
+    .deactivate{
+        text-align: center;
+    }
+
+    .contianer .top i{
+        position: relative;
+        left: 250px;
+        cursor: pointer;
+    }
+
+
+    form{
+        border: none;
+    }
+
+}
+/* Media Query for Tablets Ipads portrait mode */ 
+@media (min-width: 768px) and (max-width: 1024px){ 
+    /* body { 
+       background-color: blue; 
+   }  */
+
+    .settings{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-details{
+        padding-top: 3rem;
+    }
+
+    form{
+        border: 1px solid #eeee;
+        padding: 3rem 3rem;
+        padding-top: 6rem;
+    }
+
+    .deactivate{
+        text-align: center;
+    }
+
+    form{
+        border: none;
+    }
+
+    .contianer .top i{
+        position: relative;
+        left: 350px;
+        cursor: pointer;
+    }
+
+    .profile-image label{
+        width: 200px;
+      
+    }
+
+}
+
+
+/* Media Query for Laptops and Desktops */ 
+@media (min-width: 1025px) and (max-width: 1280px){ 
+    body { 
+        background-color: green; 
+    } 
+
+    section{
+        padding: 30px 6%;
+    }
+
+    .contianer .top i{
+        position: relative;
+        left: 500px;
+        cursor: pointer;
+    }
+
+    form{
+        border: 1px solid #eeee;
+        padding: 3rem 7rem;
+    }
+}
+
+
+/* Media Query for Large screens */ 
+@media (min-width: 1281px) { 
+
+}
+           

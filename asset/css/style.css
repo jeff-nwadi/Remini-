@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Familjen Grotesk', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --body-color: #ffff;
+    --primary-color: #244111;
+    --secondary-color: #80E142;
+    --tertiary-color: #D9D9D9;
+    --text-header-color: #000;
+}
+
+section{
+    padding: 10px 25%;
+    display: grid;
+    place-items: center;
+    align-items: center;
+}
+
+nav{
+    padding: 10px 8%;
+}
+
+/* starts scrollanimation */
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    transform: translateY(100%);
+    filter: opacity(0);
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+    filter: opacity(1);
+}
+
+.girl{
+    transition-delay: 200ms;
+}
+
+.boy{
+    transition-delay: 300ms;
+}
+
+.header{
+    transition-delay: 200ms;
+}
+
+.header-para{
+    transition-delay: 400ms;
+}
+
+.button{
+    transform-origin: 500ms;
+}
+
+/* @media (prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+} */
+
+/* ends scrollanimation */
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    
+}
+
+
+.hero-section{
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    padding-top: 8rem;
+    overflow: hidden;
+}
+
+.hero-section .hero-content .hero-text h1{
+    color: #000;
+    text-align: center;
+    font-family: Familjen Grotesk;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 91.5%; /* 103.395px */
+    letter-spacing: -4.52px;
+}
+
+.hero-section .hero-content .hero-text p{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 112%; /* 35.84px */
+    letter-spacing: -0.64px;
+    padding-top: 1.5rem;
+}
+
+.hero-section .hero-content .btn{
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .hero-content .para{
+    padding-top: 5rem;
+}
+
+.hero-section .hero-content .btn a{
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  outline: none;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+
+.hero-section .hero-content .btn .signup{
+  background: #80E142;
+  position: relative;
+  display: inline-flex;
+  letter-spacing: 1px;
+  border: none;
+  overflow: hidden;
+}
+
+.hero-section .hero-content .btn .signup:hover{
+    border: 2px solid var(--primary-color);
+    color: var(--secondary-color);
+}
+
+
+.hero-section .hero-content .btn .signup span{
+    position: relative;
+    z-index: 1;  
+    font-weight: 600;
+    color: var(--body-color);
+    font-size: 15px;
+}
+
+.hero-section .hero-content .btn .signup::before{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    background: var(--primary-color);
+    border-radius: 50%;
+    transition: width 0.2s, height 0.2s;
+}
+
+.hero-section .hero-content .btn .signup:hover::before{
+    width: 300px;
+    height: 300px;
+}
+
+.hero-section .hero-content .btn .login{
+    background: transparent;
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 1px;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
+  }
+
+
+.hero-section .hero-content .btn .login span{
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+.hero-section .hero-content .btn .login::before{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50% , -50%);
+    height: 0;
+    width: 0;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    transition: width 0.2s, height 0.2s;
+    color: var(--body-color);
+}
+
+.hero-section .hero-content .btn .login a:hover::before{
+    color: var(--body-color);
+}
+
+.hero-section .hero-content .btn .login:hover::before{
+    width: 300px;
+    height: 300px;
+}
+
+.hero-section .hero-content .btn .login:hover{
+    border: 2px solid var(--secondary-color);
+}
+
+.hero-section .hero-content p{
+    padding-top: 1.5rem;
+}
+
+
+.hero-section .hero-content p a{
+    color: var(--text-header-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* ends hero section */
+
+/*starts second-page */
+
+.second-page{
+    padding-top: 15vh;
+}
+
+.content{
+    background: var(--primary-color);
+    height: 600px;
+    border-radius: 15px 15px 15px 15px; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-text{
+    padding-top: 5rem;
+    overflow: hidden;
+}
+
+.content-text h1{
+    color: #80E142;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 57.82px */
+    letter-spacing: -2.36px;
+}
+
+.content-text p{
+    color: #80E142;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 98%; /* 25.48px */
+    letter-spacing: -1.04px;
+    padding-top: 1.5rem;
+}
+
+
+.camera-image{
+    text-align: center;
+    transform: translateY(-20%);
+    justify-content: center;
+    display: flex;
+    margin-right: 10rem;
+}
+
+.camera-image .girl{
+   width: 291px;
+   height: 346px;
+   top: 0;
+   left: 0;
+   position: relative;
+
+}
+
+.camera-image .boy{
+    width: 303px;
+    height: 356px;  
+    top: 100px;
+    left: 160px;
+    position: absolute;
+ 
+ }
+
+
+/*ends second-page */
+
+
+/* starts ourstory section */
+
+#ourstory{
+    padding-top: 10rem;
+}
+
+.header{
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.story-contianer{
+    text-align: center;
+    height: 40vh;
+}
+
+.inner-contianer{
+    padding-top: 1rem;
+}
+
+.inner-contianer p{
+    margin: 2rem auto;
+    color: var(--primary-color);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 112%; /* 38.08px */
+    letter-spacing: -0.68px;
+    /* margin-left: 8rem; */
+    width: 80%;
+    line-height: 2;
+}
+
+.social-media{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-wrapper{
+    display: inline-flex;
+}
+
+.icon-wrapper .icon{
+   margin: 0 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   position: relative;
+   z-index: 2;
+   cursor: pointer;
+   transition: all 0.4s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+}
+
+.icon-wrapper .icon a{
+    height: 50px;
+    width: 50px;
+    display: block;
+    background-color: var(--tertiary-color);
+    box-shadow: 0 7px 7px rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.icon-wrapper .icon a i{
+    font-size: 12px;
+    line-height: 50px;
+    color: var(--primary-color);
+}
+
+.icon-wrapper .icon:hover a i{
+  color: #ffff;
+}
+
+.icon-wrapper .icon .tooltip{
+    position: absolute;
+    top: 0;
+    background-color: var(--tertiary-color);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    opacity: 0;
+    color: #ffff;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, 0.55, 0.265, 1.55);
+
+}
+
+.icon-wrapper .icon:hover .tooltip{
+    opacity: 1;
+    pointer-events: auto;
+    top: -70px;
+}
+
+.icon-wrapper .icon .tooltip::before{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: var(--tertiary-color);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+
+}
+
+.icon-wrapper .icon:hover a,
+.icon-wrapper .icon:hover .tooltip{
+ text-shadow: 0px -1px rgba(0,0,0,0.4);
+
+}
+
+.icon-wrapper .twitter:hover a,
+.icon-wrapper .twitter:hover .tooltip,
+.icon-wrapper .twitter:hover .tooltip::before{
+    background: #46c1f6;
+}
+
+.icon-wrapper .instagram:hover a,
+.icon-wrapper .instagram:hover .tooltip,
+.icon-wrapper .instagram:hover .tooltip::before{
+    background: #e1306c;
+}
+
+.icon-wrapper .email:hover a,
+.icon-wrapper .email:hover .tooltip,
+.icon-wrapper .email:hover .tooltip::before{
+    background: #de463b;
+}
+/* end ourstory section */
+
+
+@media (max-width: 480px){ 
+    /* body { 
+        background-color: red; 
+    }  */
+
+ 
+    section{
+        padding: 10px 4%;
+    }
+
+    .hero-section .hero-content .hero-text h1{
+        font-size: 55px;
+    }
+
+    .hero-section .hero-content .hero-text .header-para{
+        font-size: 18px;
+    }
+
+    .hero-section .hero-content .btn{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .camera-image .girl{
+    display: none;
+
+    }
+
+    .camera-image .boy{
+        width: 250px;
+        height: 350px;  
+        top: 0px;
+        left: -47px;
+        right: 0px;
+        transform: translateY(-50%);
+     }
+    
+    nav{
+        padding: 10px 5%;
+    }
+    .content-text h1{
+        text-align: center;
+        font-size: 30px;
+    }
+
+      
+    .content-text p{
+        text-align: center;
+        font-size: 14px;
+    }
+    
+
+    .social-media{
+        padding-top: 3rem;
+    }
+
+    .second-page{
+        padding-top: 10rem;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        height: 600px;
+    
+        }
+
+     
+    .content{
+        height: 600px;
+    }
+
+    .story-contianer{
+        height: 60vh;
+    }
+
+    .social-media .icons i{
+        margin: 0 1rem;
+        font-size: 16px;
+    }
+
+   
+
+}
+
+/* Media Query for low resolution Tablets, Ipads */ 
+ @media (min-width: 481px) and (max-width: 767px) { 
+     /* body { 
+        background-color: yellow; 
+    }  */
+
+    section{
+        padding: 10px 4%;
+    }
+
+    .camera-image .boy{
+        width: 303px;
+        height: 356px;  
+        top: 0px;
+        left: -65px;
+        right: 0px;
+        transform: translateY(-50%);
+     }
+    
+     .hero-section .hero-content .hero-text h1{
+        font-size: 65px;
+    }
+    
+    .hero-section .hero-content .hero-text p{
+        font-size: 18px;
+    }
+
+    .hero-section .hero-content .btn{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .camera-image .girl{
+    display: none;
+
+    }
+    
+    nav{
+        padding: 10px 3%;
+    }
+    .content-text h1{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .social-media{
+        padding-top: 5rem;
+    }
+    .second-page{
+        padding-top: 10rem;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        height: 600px;
+    
+        }
+
+    .social-media .icons i{
+        margin: 0 1rem;
+        font-size: 16px;
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */ 
+ @media (min-width: 768px) and (max-width: 1024px){ 
+     /* body { 
+        background-color: blue; 
+    }  */
+
+    section{
+        padding: 10px 20%;
+    }
+
+    nav{
+        padding: 10px 8%;
+    }
+    
+    .content-text{
+        padding-top: 2rem;
+    }
+
+    .content{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 750px;
+    }
+
+    .hero-section .hero-content .hero-text p{
+        font-size: 19px;
+    }
+
+    .camera-image {
+        overflow: visible;
+    }
+
+    .content-text h1{
+        text-align: center;
+        font-size: 45px;
+    }
+    
+    .content-text p{
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .story-contianer{
+        height: 45vh;
+    }
+    
+    .social-media .icons i{
+        margin: 0 1rem;
+        font-size: 16px;
+    }
+      
+} 
+
+/* Media Query for Laptops and Desktops */ 
+ @media (min-width: 1025px) and (max-width: 1280px){ 
+      /* body { 
+        background-color: green; 
+    }   */
+
+    section{
+        padding: 10px 15%;
+    }
+
+    nav{
+        padding: 10px 2%;
+    }
+
+    .story-contianer{
+        height: 45vh;
+    }
+    
+    .content-text h1{
+        font-size: 40px;
+    }
+    
+    .content-text p{
+        font-size: 16px;
+    }
+    
+
+    .social-media .icons i{
+        margin: 0 1rem;
+        font-size: 16px;
+    }
+
+    .camera-image{
+        margin-right: 12rem;
+    }
+
+    .inner-content{
+        font-size: 35px;
+    }
+    
+}
+
+/* Media Query for Large screens */ 
+@media (min-width: 1281px) { 
+   
+} 
+            

@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Familjen Grotesk', sans-serif;
+}
+
+:root{
+    --body-color: #ffff;
+    --primary-color: #244111;
+    --secondary-color: #80E142;
+    --tertiary-color: #D9D9D9;
+    --text-header-color: #000;
+}
+
+section{
+    padding: 50px 10%;
+}
+
+.post-contianer{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* left-content starts */
+
+.swiper {
+    width: 500px;
+    height: 500px;
+}
+
+.swiper-pagination{
+    color: #80E142;
+}
+
+.image-contianer{
+    width: 480px;
+    height: 534px;
+    flex-shrink: 0;
+    border-radius: 17px;
+    background: #f0eeee;
+    cursor: pointer;
+}
+
+.heading{
+    padding-bottom: 2rem;
+}
+
+.input-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 14rem;
+}
+
+.input-content img{
+    display: block;
+    cursor: pointer;
+}
+
+.input-content input{
+    display: none;
+}
+
+/* left-content ends */
+
+
+/* right-content strats */
+
+.right-content{
+    padding-top: 4rem;
+}
+
+.right-content textarea{
+    width: 487px;
+    height: 187px;
+    flex-shrink: 0;
+    border-radius: 17px;
+    border: 2px solid #000;
+    background: #F9F9F9;
+    padding: 1.5rem 1.5rem;
+    outline: none;
+}
+
+textarea:focus{
+    border: 2px solid #80E142;
+}
+
+textarea::placeholder{
+    color: #979797;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 62%; /* 15.5px */
+    letter-spacing: -1.25px;
+}
+
+.location-input{
+    position: relative;
+    padding-top: 2rem;
+
+}
+
+.location-input input:focus{
+    border: 2px solid #80E142;
+}
+
+.location-input input{
+    width: 487px;
+    height: 71px;
+    flex-shrink: 0;
+    border-radius: 17px;
+    border: 2px solid #000;
+    background: #F9F9F9;
+    padding: 0 2rem;
+    outline: none;
+}
+
+.location-input img{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    top: 50px;
+}
+
+input::placeholder{
+    color: #979797;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 62%; /* 15.5px */
+    letter-spacing: -1.25px;
+
+}
+
+
+.sections{
+    padding-top: 2rem;
+}
+
+.select-content{
+    display: flex;
+}
+
+.select-content h3{
+    margin: 20px 10px;
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 62%; /* 12.4px */
+    letter-spacing: -1px;
+}
+
+.select-btn{
+    display: flex;
+    flex-direction: column;
+}
+
+.select-btn li{
+   margin: 6px 10px;
+}
+
+.select-btn li{
+    border-radius: 50%;
+    color: #000;
+    cursor: pointer;
+}
+
+.submit-btn{
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.submit-btn button{
+    width: 153px;
+    height: 41px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #1E1E1E;
+    color: #ffff;
+    border: none;
+    cursor: pointer;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::after{
+    position: absolute;
+    content: '';
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    background: #D9D9D9;;
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+
+ul li.checked::after{
+    background: #000;
+}
+
+
+
+/* right-content ends */
+
+/* @media query */
+
+@media (max-width: 480px){ 
+    body { 
+        background-color: red;
+    }
+
+    .post-contianer{
+        flex-direction: column;
+       
+    }
+    
+    section{
+        padding: 40px 5%;
+        display: grid;
+        place-items: center;
+        align-items: center;
+    }
+
+    .image-contianer{
+        width: 400px;
+        height: 500px;
+    }
+    
+    .swiper {
+        width: 250px;
+        height: 400px;
+    }
+
+    .right-content textarea{
+        width: 250px;
+        height: 150px;
+    }
+
+    .location-input input{
+        width: 250px;
+        height: 60px;
+    }
+
+    .location-input img{
+        right: 20px;
+        top: 45px;
+    }
+
+    .input-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10rem;
+    }
+
+}
+
+/* Media Query for low resolution Tablets, Ipads */ 
+ @media (min-width: 481px) and (max-width: 767px) { 
+     /* body { 
+        background-color: yellow; 
+    }  */
+
+    .post-contianer{
+        flex-direction: column;
+       
+    }
+    
+    section{
+        padding: 40px 8%;
+        display: grid;
+        place-items: center;
+        align-items: center;
+    }
+
+    .image-contianer{
+        width: 400px;
+        height: 500px;
+    }
+    
+    .swiper {
+        width: 400px;
+        height: 400px;
+    }
+
+    .right-content textarea{
+        width: 400px;
+        height: 150px;
+    }
+
+    .location-input input{
+        width: 400px;
+        height: 60px;
+    }
+
+    .location-input img{
+        right: 20px;
+        top: 45px;
+    }
+
+    .input-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10rem;
+    }
+} 
+
+
+/* Media Query for Tablets Ipads portrait mode */ 
+@media (min-width: 768px) and (max-width: 1024px){ 
+    /* body { 
+        background-color: blue; 
+    } */
+
+    .post-contianer{
+        flex-direction: column;
+       
+    }
+    
+    section{
+        padding: 40px 8%;
+        display: grid;
+        place-items: center;
+        align-items: center;
+    }
+
+
+    .image-contianer{
+        width: 400px;
+        height: 500px;
+    }
+    
+    .swiper {
+        width: 500px;
+        height: 500px;
+    }
+
+    .right-content textarea{
+        width: 500px;
+        height: 150px;
+    }
+
+    .location-input input{
+        width: 500px;
+        height: 60px;
+    }
+
+    .location-input img{
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        top: 45px;
+    }
+
+} 
+
+/* Media Query for Laptops and Desktops */ 
+ @media (min-width: 1025px) and (max-width: 1280px){ 
+     /* body { 
+        background-color: green; 
+    } */
+
+    section{
+        padding: 50px 5%;
+    }
+
+    .image-contianer{
+        width: 400px;
+        height: 400px;
+    }
+    
+    .swiper {
+        width: 400px;
+        height: 500px;
+    }
+
+    .right-content textarea{
+        width: 480px;
+        height: 180px;
+    }
+
+}
+
+/* Media Query for Large screens */ 
+@media (min-width: 1281px) { 
+   /* section{
+    padding: 50px 8%;
+   } */
+} 
+            
+
+
+
+
+

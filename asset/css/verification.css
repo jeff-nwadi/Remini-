@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Familjen Grotesk', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --body-color: #ffff;
+    --primary-color: #244111;
+    --secondary-color: #80E142;
+    --tertiary-color: #D9D9D9;
+    --text-header-color: #000;
+}
+
+section{
+    display: grid;
+    place-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.contianer .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    
+}
+
+.contianer .text{
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.contianer .text h2{
+    color: #000;
+    font-family: Familjen Grotesk;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.75px;
+}
+
+.contianer .text p{
+    color: #8F8F8F;
+    text-align: center;
+    font-family: Familjen Grotesk;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.15px;
+    padding-top: 1rem;
+}
+
+.contianer .code-box form .box{
+    display: flex;
+    padding-top: 5rem;
+    gap: 20px;
+}
+
+
+.contianer .code-box .box input{
+    width: 97px;
+    height: 64px;
+    border-radius: 17px;
+    border: 2px solid #000;
+    background: #FFF;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.contianer .btn{
+    text-align: center;
+    padding-top: 6rem;
+}
+
+input::-webkit-inner-spin-button{
+    display: none;
+}
+
+input::-webkit-outer-spin-button{
+    display: none;
+}
+
+.contianer .btn button{
+    border: none;
+    width: 182px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 17px;
+    background: #F2F2F2;
+    cursor: pointer;
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+    font-family: Familjen Grotesk;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.85px;
+}
+
+
+.contianer .btn button:hover{
+   background: #cccbcb;
+}

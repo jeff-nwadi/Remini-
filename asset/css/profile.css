@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Familjen Grotesk', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --body-color: #ffff;
+    --primary-color: #244111;
+    --secondary-color: #80E142;
+    --tertiary-color: #D9D9D9;
+    --text-header-color: #000;
+}
+
+section{
+    padding: 50px 18%;
+}
+
+/* .profile */
+
+.profile{
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-image{
+    padding-bottom: 2rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-image img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #80E142;
+}
+
+.circle{
+    background: #80E142;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.profile-name{
+    padding-top: 1rem;
+}
+
+.handle-name{
+    padding-top: 10px;
+    padding-bottom: 1.3rem;
+}
+
+.handle-name span{
+    cursor: pointer;
+    color: #a4b1c2;
+ }
+
+.profile-name span{
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.bio{
+    padding-bottom: 2rem;
+    transition: all 0.5s;
+}
+
+.bio span{
+   padding: 10px 1rem;
+   cursor: pointer;
+   background: #f5f4f4;
+   border-radius: 10px;
+}
+
+.followers span{
+    color: #a4b1c2;
+    margin: 0 .5rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.followers{
+    display: flex;
+    text-align: center;
+    
+}
+
+.followers li{
+   font-size: 1.2rem;
+   font-weight: 600;
+}
+
+.edit .edit-profile{
+    padding-bottom: 1rem;
+
+}
+
+.edit .edit-profile button{
+    width: 183px;
+    height: 42px;
+    flex-shrink: 0;
+    border: 2px solid var(--text-header-color);
+    background: transparent;
+    border-radius: 17px;
+
+}
+
+
+.edit .edit-profile button a{
+    color: var(--text-header-color);
+    font-weight: 600;
+}
+
+.edit .share-profile button{
+    width: 183px;
+    height: 42px;
+    flex-shrink: 0;
+    border: 2px solid var(--text-header-color);
+    background: transparent;
+    border-radius: 17px;
+
+}
+
+.openMenu{
+    display: none;
+}
+
+
+.edit .share-profile button a{
+    color: var(--text-header-color);
+    font-weight: 600;
+}
+
+.edit .closeMenu{
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+
+
+/* main section */
+
+main{
+    padding-top: 7rem;
+}
+
+.photo-section{
+    display: grid;
+    grid-template-columns: repeat(3 ,3fr);
+    gap: 20px;
+}
+
+.add-photo{
+    padding: 1rem 1rem;
+    border-radius: 17px;
+    background: rgba(232, 232, 232, 0.32);
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    transition: all 0.5;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+
+.add-photo:hover{
+    transform: scale(1.1);
+}
+
+.add-photo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    padding-top: 7rem;
+}
+
+.add-photo a i{
+    font-size: 50px;
+    color: var(--text-header-color);
+}
+
+.photos .text, a{
+    padding: 2rem;
+    color: var(--body-color);
+}
+
+.photos .text{
+    padding-bottom: 7rem;
+    
+}
+
+.photos{
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 17px;
+    background: linear-gradient(180deg, #80E142 0%, rgba(38, 206, 217, 0.74) 100%);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.photos:hover{
+    transform: scale(1.1);
+}
+
+
+.photos .text span{
+    color: #ffff;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.down-text{
+    padding-top: 8rem;
+}
+
+.down-text a{
+    color: #ffff;
+    font-size: 20px;
+}
+
+.sec{
+    border-radius: 17px;
+    background: linear-gradient(180deg, #6B42E1 0%, rgba(30, 238, 251, 0.74) 100%);
+}
+/* fixed secton */
+nav{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    padding-top: 2rem;
+    position: sticky;
+    bottom: 40px;
+}
+
+.fixed-contianer{
+    width: 300px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 52px;
+    border: 2px solid #000;
+    background: #FFF;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.fixed-contianer .feed-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fixed-contianer .feed-content i{
+    margin: 0 2px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: #244111;
+}
+
+.fixed-contianer .feed-content i:hover{
+   transform: scale(1.3);
+}
+
+.active{
+    transform: scale(1.5);
+}
+
+/* media query */
+
+@media (max-width: 480px){ 
+    /* body { 
+        background-color: red; 
+    } */
+
+    section{
+        padding: 50px 2%;
+        display: grid;
+        place-items: center;
+        align-items: center;
+    }
+
+    .photo-section{
+        display: grid;
+        grid-template-columns: repeat(2 ,2fr);
+        gap: 15px;
+    }
+
+    .photos{
+        width: 140px;
+        height: 181px;
+        flex-shrink: 0;
+    }
+
+    
+    .add-photo{
+        width: 140px;
+        height: 181px;
+        flex-shrink: 0;
+    }
+
+    .add-photo a i{
+        font-size: 30px;
+        color: var(--text-header-color);
+    }
+
+    
+
+    .add-photo a{
+        padding-top: 4rem;
+    }
+
+    .photos .text span{
+        color: #FFF;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+   
+    .photos .text, a{
+        padding: 1rem;
+        color: var(--body-color);
+    }
+
+    .photos .text{
+        padding-bottom: 4rem;
+        
+    }
+
+    .profile-name span{
+        color: #000;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .edit{
+        height: 50vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #244111;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    .edit .closeMenu{
+        display: block;
+        position: absolute;
+        right: 20px;
+
+    }
+
+    .openMenu{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .edit .share-profile button{
+        border: 2px solid var(--body-color);
+    
+    }
+    
+    
+    .edit .share-profile button a{
+        color: var(--body-color);
+    }
+
+    .edit .edit-profile button{
+        border: 2px solid var(--body-color);
+    }
+    
+    
+    .edit .edit-profile button a{
+        color: var(--body-color);
+    }
+
+    .edit .closeMenu i{
+        color: var(--body-color);
+    }
+
+    
+    .fixed-contianer{
+        width: 300px;
+    }
+
+    .fixed-contianer .feed-content i{
+        margin: 0 1rem;
+    }
+    
+
+}
+
+/* Media Query for low resolution Tablets, Ipads */ 
+ @media (min-width: 481px) and (max-width: 767px) { 
+    /* body { 
+        background-color: yellow; 
+    } */
+
+    section{
+        padding: 50px 3%;
+        display: grid;
+        place-items: center;
+        align-items: center;
+    }
+
+    .photo-section{
+        display: grid;
+        grid-template-columns: repeat(2 ,2fr);
+        gap: 20px;
+    }
+    .photos{
+        width: 171px;
+        height: 181px;
+        flex-shrink: 0;
+    }
+
+    .photos .text span{
+        color: #FFF;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .photos .text, a{
+        padding: 1rem;
+        color: var(--body-color);
+    }
+
+    .add-photo a i{
+        font-size: 30px;
+        color: var(--text-header-color);
+    }
+    
+    .add-photo{
+        width: 171px;
+        height: 181px;
+        flex-shrink: 0;
+    }
+
+    .photos .text{
+        padding-bottom: 4rem;
+        
+    }
+
+    .add-photo a{
+        padding-top: 4rem;
+    }
+
+    .edit{
+        height: 50vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #244111;
+        transition: top 1s ease;
+        display: none;
+    }
+
+    .edit .closeMenu{
+        display: block;
+        position: absolute;
+        right: 20px;
+
+    }
+
+    .openMenu{
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    
+    .edit .share-profile button{
+        border: 2px solid var(--body-color);
+    
+    }
+    
+    
+    .edit .share-profile button a{
+        color: var(--body-color);
+    }
+
+    .edit .edit-profile button{
+        border: 2px solid var(--body-color);
+    }
+    
+    
+    .edit .edit-profile button a{
+        color: var(--body-color);
+    }
+
+    .edit .closeMenu i{
+        color: var(--body-color);
+    }
+
+    .fixed-contianer{
+        width: 300px;
+    }
+
+    .fixed-contianer .feed-content i{
+        margin: 0 1rem;
+    }
+}
+
+
+/* Media Query for Tablets Ipads portrait mode */ 
+ @media (min-width: 768px) and (max-width: 1024px){ 
+     /* body { 
+        background-color: blue; 
+    }  */
+
+    section{
+        padding: 50px 10%;
+    }
+
+    .photo-section{
+        display: grid;
+        grid-template-columns: repeat(2 ,2fr);
+        gap: 30px;
+    }
+
+    .photos{
+        width: 300px;
+        height: 300px;
+    }
+
+    
+    .add-photo{
+        width: 300px;
+        height: 300px;
+    }
+
+
+    .photos .text, a{
+        padding: 1rem;
+        color: var(--body-color);
+    }
+
+    .photos .text{
+        padding-bottom: 6rem;
+        
+    }
+}
+
+
+/* Media Query for Laptops and Desktops */ 
+ @media (min-width: 1025px) and (max-width: 1280px){ 
+    /* body { 
+        background-color: green; 
+    } */
+
+    .photo-section{
+        display: grid;
+        grid-template-columns: repeat(2 ,2fr);
+        gap: 20px;
+    }
+
+    .photos .text, a{
+        padding: 1rem;
+        color: var(--body-color);
+    }
+
+    .photos .text{
+        padding-bottom: 8rem;
+        
+    }
+
+    
+    .fixed-contianer .feed-content i{
+        margin: 0 1rem;
+    }
+
+}
+
+/* Media Query for Large screens */ 
+@media (min-width: 1281px) { 
+   
+} 
+            

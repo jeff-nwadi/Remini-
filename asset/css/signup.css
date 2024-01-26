@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Familjen Grotesk', sans-serif;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+:root{
+    --body-color: #ffff;
+    --primary-color: #244111;
+    --secondary-color: #80E142;
+    --tertiary-color: #D9D9D9;
+    --text-header-color: #000;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+    
+}
+
+.logo h3{
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.contianer{
+    padding-top: 17rem;
+    text-align: center;
+}
+
+.contianer .form{
+    padding-top: 2rem;
+}
+
+.text{
+    padding-bottom: 1rem;
+}
+
+form{
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+}
+
+form input{
+    background: var(--body-color);
+    border: 2px solid var(--text-header-color);
+    border-radius: 50px;
+    outline: none;
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+form button{
+    border-radius: 50%;
+    height: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+form button:hover{
+    transform: translateX(15%)
+}
+ 
+.contianer form input:focus{
+    border: 2px solid #80E142;
+} 
+
+.image-contianer{
+    z-index: -1;
+}
+
+.btn{
+    padding: 1rem 1rem;
+
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.btn i{
+    font-size: 20px ; 
+}
+
+.input-btn{
+    align-items: center;
+}
+
+.login-text{
+    padding-top: 1rem;
+}
+
+.login-text span a{
+  color: var(--secondary-color);
+}
+
+.image-contianer{
+    position: relative;
+    padding: 2rem;
+}
+
+.images-1{
+    position: absolute;
+    top: -500%;
+    width: 200px;
+}
+
+
+.images-2{
+    position: absolute;
+    top: -800%;
+    width: 230px;
+    right: 300px;
+}
+
+.images-3{
+    position: absolute;
+    width: 180px;
+    top: -150%;
+    right: 0px
+}
+
+.images-4{
+    position: absolute;
+    width: 200px;
+    bottom: -345%;
+    left: 400px;
+}
+
+
+@media (max-width: 480px){ 
+    /* body { 
+        background-color: red;
+    } */
+
+    
+    form{
+        width: 300px;
+        max-width: 100%;
+        position: relative;
+    }
+
+    form input{
+        background: var(--body-color);
+        border: 2px solid var(--text-header-color);
+        border-radius: 50px;
+        outline: none;
+        padding: 1rem 2rem;
+        width: 100%;
+    }
+
+    .contianer{
+        padding-top: 12rem;
+        text-align: center;
+    }
+
+    
+    .images-1{
+        position: absolute;
+        top: -700%;
+        width: 160px;
+        left: -40px;
+    }
+    
+    .images-2{
+        display: none;
+    }
+    
+    .images-3{
+       position: absolute;
+       right: 0px;
+       width: 100px;
+       top: 0px;
+       padding-top: 2rem;
+    }
+    
+    .images-4{
+        position: absolute;
+        width: 200px;
+        bottom: -480%;
+        left: -80px;
+    }
+
+}
+
+/* Media Query for low resolution Tablets, Ipads */ 
+ @media (min-width: 481px) and (max-width: 767px) { 
+     /* body { 
+        background-color: yellow; 
+    }
+     */
+    .contianer{
+        padding-top: 12rem;
+        text-align: center;
+    }
+
+    .images-1{
+        position: absolute;
+        top: -700%;
+        width: 200px;
+        left: -40px;
+    }
+    
+    .images-2{
+        display: none;
+    }
+    
+    .images-3{
+       position: absolute;
+       right: 0px;
+       width: 130px;
+       top: 0px;
+       padding-top: 2rem;
+    }
+    
+    .images-4{
+        position: absolute;
+        width: 240px;
+        bottom: -500%;
+        left: -80px;
+    }
+
+
+}
+
+/* Media Query for Tablets Ipads portrait mode */ 
+ @media (min-width: 768px) and (max-width: 1024px){ 
+    /* body { 
+        background-color: blue; 
+    }  */
+
+    .images-1{
+        position: absolute;
+        top: -600%;
+        width: 180px;
+    }
+    
+    .images-2{
+        position: absolute;
+        top: -800%;
+        width: 200px;
+        right: 70px;
+    }
+    
+    .images-3{
+        position: absolute;
+        width: 150px;
+        top: 200%;
+        right: 0px;
+    }
+    
+    .images-4{
+        position: absolute;
+        width: 250px;
+        bottom: -1000%;
+        left: 100px;
+    }
+
+
+} 
+
+/* Media Query for Laptops and Desktops */ 
+ @media (min-width: 1025px) and (max-width: 1280px){ 
+    body { 
+        background-color: green; 
+    } 
+
+    .images-1{
+        width: 150px;
+    }
+
+    .images-2{
+        right: 150px;
+    }
+
+    .images-4{
+        left: 300px;
+    }
+
+    .images-3{
+        width: 130px;
+    }
+}
+
+/* Media Query for Large screens */ 
+@media (min-width: 1281px) { 
+   
+} 
+            
+
+
+
